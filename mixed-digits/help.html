@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mixed digits - Help</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="digit" data-segments="abcefg"></div>
+    <div class="digit" data-segments="cf"></div>
+    <div class="digit" data-segments="acdeg"></div>
+    <div class="digit" data-segments="acdfg"></div>
+    <div class="digit" data-segments="bcdf"></div>
+    <div class="digit" data-segments="abdfg"></div>
+    <div class="digit" data-segments="abdefg"></div>
+    <div class="digit" data-segments="acf"></div>
+    <div class="digit" data-segments="abcdefg"></div>
+    <div class="digit" data-segments="abcdfg"></div>
+    <ul>
+      <li><div class="digit" data-segments="cf"></div> and <div class="digit" data-segments="acf"></div> can easily be identified, what's different between the two ?</li>
+      <li><div class="digit" data-segments="bcdf"></div> is also unique</li>
+      <li>Use frequency analysis on segments for the 10 digits<ul>
+        <li><div class="digit" data-segments="e"></div> appears 4 times</li>
+        <li><div class="digit" data-segments="b"></div> appears 6 times</li>
+        <li><div class="digit" data-segments="f"></div> appears 9 times</li>
+      </ul></li>
+    </ul>
+  </body>
+  <script src="../lib.js"></script>
+  <script src="script.js"></script>
+</html>
