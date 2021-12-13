@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mixed digits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mixed-digits/styles.css">
+  </head>
+  <body>
+    <small>
+      Idea from <a target="_blank" href="https://adventofcode.com/2021/day/8">AdventOfCode'2021, day 8</a><br>
+      Visual inspired from <a target="_blank" href="https://codepen.io/cMack87/pen/rVmEQm">Animated Digital LED Clock</a>
+      created by <a target="_blank" href="https://codepen.io/cMack87">@cMack87</a><br>
+      Need <a target="_blank" href="mixed-digits/help.html">help ?</a>
+    </small>
+    <div class="explanations">
+      A mistake was made when setting up the digital display, connections between signals (a, b, ..., g) and segments (a, b, ..., g) are shuffled.<br>
+      Fortunately, the display includes a diagnostic mode that shows the 10 digits <i>(but in a random order)</i>
+      followed by a · and a 4 digits code.<br>
+      Using the mapping table, you can reconnect each signal to the right segment (a, b, ...,g) and decode the display.<br>
+      <br>
+      What is the code ?
+    </div>
+    <div class="initial"></div>
+    <table class="mappings"></table>
+    <div class="fixed"></div>
+  </body>
+  <script src="lib.js"></script>
+  <script src="mixed-digits/script.js"></script>
+</html>
