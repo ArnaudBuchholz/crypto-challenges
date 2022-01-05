@@ -49,6 +49,13 @@ function refresh () {
     .forEach((digit, index) => {
       digit.className = 'digit code ' + encodeClass(codeDigits[index], userMappings)
     })
+  document.querySelector('.initial').className = 'initial ' + userMappings.reduce((mapped, mapping, index) => {
+    if (mapping) {
+      mapped.push('abcdefg'[index])
+    }
+    return mapped
+  }, []).join(' ')
+  document.querySelector('.fixed').className = 'fixed ' + userMappings.join(' ')
 }
 
 function setup () {
