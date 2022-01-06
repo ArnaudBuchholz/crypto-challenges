@@ -15,3 +15,6 @@ window.tag = (name, attributes = {}, ...children) => {
   })
   return node
 }
+
+window.byId = id => document.getElementById(id)
+window.byCss = selector => document.querySelector(selector)
