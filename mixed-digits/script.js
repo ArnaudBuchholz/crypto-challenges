@@ -41,11 +41,11 @@ function encodeClass (digit, mappings) {
 }
 
 function refresh () {
-  [].slice.call(byCssAll('.digit.control'))
+  byCssAll('.digit.control')
     .forEach((digit, index) => {
       digit.className = 'digit control ' + encodeClass(debugDigits[index], userMappings)
     });
-  [].slice.call(byCssAll('.digit.code'))
+  byCssAll('.digit.code')
     .forEach((digit, index) => {
       digit.className = 'digit code ' + encodeClass(codeDigits[index], userMappings)
     })
@@ -95,7 +95,7 @@ function setup () {
 }
 
 function help () {
-  [].slice.call(byCssAll('.digit'))
+  byCssAll('.digit')
     .forEach(digit => {
       const segments = digit.dataset.segments.split('').join(' ')
       digit.appendChild(createDigit(segments))
