@@ -1,0 +1,51 @@
+html, body {
+  color: black;
+  background-color: white;
+}
+
+th {
+  text-align: left;
+}
+
+input[readonly] {
+  border: 1px gray dotted;
+}
+
+.public {
+  background-color: #bdf0cb;
+}
+
+.private {
+  background-color: #f0bdbd;
+}
+
+.private-but-computed {
+  background-color: #f5dada;
+}
+
+.algorithm {
+  background-color: #dfdfdf;
+}
+
+td.algorithm {
+  text-align: center;
+}
+
+.input {
+  margin: 4px;
+}
+
+.label {
+  display: inline-block;
+  width: 10%;
+}
+
+input.error {
+  border: 1px red solid;
+}
+
+textarea {
+  width: 90%;
+  resize: none;
+  height: 5rem;
+}
