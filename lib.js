@@ -23,7 +23,7 @@ window.byCssAll = selector => [].slice.call(document.querySelectorAll(selector))
 const head = byCss('head')
 head.insertBefore(tag('link', {
   rel: 'stylesheet',
-  href: 'styles.css'
+  href: document.currentScript.src.replace('/lib.js', '/styles.css')
 }), head.firstChild)
 
 document.body.insertBefore(tag('div', { id: 'forkongithub' }, tag('a', {
