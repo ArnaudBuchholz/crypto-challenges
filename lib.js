@@ -18,3 +18,16 @@ window.tag = (name, attributes = {}, ...children) => {
 
 window.byId = id => document.getElementById(id)
 window.byCss = selector => document.querySelector(selector)
+window.byCssAll = selector => [].slice.call(document.querySelectorAll(selector))
+
+const head = byCss('head')
+head.insertBefore(tag('link', {
+  rel: 'stylesheet',
+  href: 'styles.css'
+}), head.firstChild)
+
+document.body.insertBefore(tag('div', { id: 'forkongithub' }, tag('a', {
+  href: 'https://github.com/ArnaudBuchholz/crypto-challenges',
+  target: '_blank',
+  rel: 'noreferrer noopener'
+}, 'Fork me on GitHub')), document.body.firstChild)
