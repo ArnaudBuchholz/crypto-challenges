@@ -41,26 +41,26 @@ function encodeClass (digit, mappings) {
 }
 
 function refresh () {
-  [].slice.call(document.querySelectorAll('.digit.control'))
+  [].slice.call(byCssAll('.digit.control'))
     .forEach((digit, index) => {
       digit.className = 'digit control ' + encodeClass(debugDigits[index], userMappings)
     });
-  [].slice.call(document.querySelectorAll('.digit.code'))
+  [].slice.call(byCssAll('.digit.code'))
     .forEach((digit, index) => {
       digit.className = 'digit code ' + encodeClass(codeDigits[index], userMappings)
     })
-  document.querySelector('.initial').className = 'initial ' + userMappings.reduce((mapped, mapping, index) => {
+  byCss('.initial').className = 'initial ' + userMappings.reduce((mapped, mapping, index) => {
     if (mapping) {
       mapped.push('abcdefg'[index])
     }
     return mapped
   }, []).join(' ')
-  document.querySelector('.fixed').className = 'fixed ' + userMappings.join(' ')
+  byCss('.fixed').className = 'fixed ' + userMappings.join(' ')
 }
 
 function setup () {
-  const initial = document.querySelector('.initial')
-  const fixed = document.querySelector('.fixed')
+  const initial = byCss('.initial')
+  const fixed = byCss('.fixed')
   let index
   for (index = 0; index < 10; ++index) {
     initial.appendChild(createDigit(encodeClass(debugDigits[index])))
@@ -72,7 +72,7 @@ function setup () {
     initial.appendChild(createDigit(encodeClass(codeDigits[index])))
     fixed.appendChild(createDigit('code'))
   }
-  const mappings = document.querySelector('.mappings')
+  const mappings = byCss('.mappings')
   const row = mappings.appendChild(tag('tr'))
   'abcdefg'.split('').forEach((mapping, index) => {
     const input = tag('input', {
@@ -95,7 +95,7 @@ function setup () {
 }
 
 function help () {
-  [].slice.call(document.querySelectorAll('.digit'))
+  [].slice.call(byCssAll('.digit'))
     .forEach(digit => {
       const segments = digit.dataset.segments.split('').join(' ')
       digit.appendChild(createDigit(segments))
