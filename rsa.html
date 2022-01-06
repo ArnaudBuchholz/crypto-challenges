@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RSA algorithm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rsa/styles.css">
+  </head>
+  <body>
+    <table border="0" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <th class="public">&#128273; Public key</th>
+        <th class="private">&#128272; Private key</th>
+      </tr>
+      <tr>
+        <td class="public">
+          <div class="input">
+            <span class="label">N</span>
+            <input type="number" id="N" value="1355"><br />
+          </div>
+        </td>
+        <td class="private">
+          <div class="input">
+            <span class="label">N</span>
+            <input type="number" id="Nro" value="1355" readonly><br />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="public">
+          <div class="input">
+            <span class="label">e</span>
+            <input type="number" id="e" value="347">
+          </div>
+        </td>
+        <td  class="private">
+          <div class="input">
+            <span class="label">d</span>
+            <input type="number" id="d" readonly><br />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="algorithm">&#120543;N = (P - 1) * (Q - 1)</td>
+        <td class="private-but-computed">
+          <div class="input">
+            <span class="label">P</span>
+            <input type="number" id="P" readonly><br />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="algorithm">1 &lt; e &lt; &#120543;N</td>
+        <td class="private-but-computed">
+          <div class="input">
+            <span class="label">Q</span>
+            <input type="number" id="Q" readonly><br />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="algorithm">e * d mod &#120543;N = 1</td>
+        <td class="private-but-computed">
+          <div class="input">
+            <span class="label">&#120543;N</span>
+            <input type="number" id="phiN" readonly><br />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr></td>
+      </tr>
+      <tr>
+        <th>M <i>message</i></th>
+        <th>C <i>crypted</i></th>
+      </tr>
+      <tr>
+        <td>
+          <textarea id="M">Hello World !</textarea>
+        </td>
+        <td>
+          <textarea id="C"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="encode">Encode ⏩</button>
+          <input type="checkbox" id="asText" checked><label for="asText">As text</label>
+        </td>
+        <td>
+          <button id="decode">⏪ Decode</button>
+        </td>
+      </tr>
+    </table>
+    <script src="lib.js"></script>
+    <script src="rsa/script.js"></script>
+  </body>
+</html>
